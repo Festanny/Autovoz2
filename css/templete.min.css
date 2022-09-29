@@ -5873,13 +5873,21 @@ footer.footer-white .widget_getintuch li a {
 	cursor: pointer;
 	font-size: 18px;
 	transition: all .3s;
+	position: relative;
 }
-/* #orderDirections1 .modal-body div:last-of-type label {
-	border: 0;
-} */
+#orderDirections1 .modal-body label:hover::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 3px;
+	background-color: rgba(0,0,0,0.3);
+	left: 0;
+	bottom: -1px;
+	border-radius: 0;
+}
 #orderDirections1 .modal-body label:hover {
 	background-color: var(--rgba-primary-5);
-	border-bottom: 3px solid rgba(0,0,0,0.3);
+	/* border-bottom: 3px solid rgba(0,0,0,0.3); */
 }
 #orderDirections1 .modal-body label:hover img {
 	transform: scale(0.85);

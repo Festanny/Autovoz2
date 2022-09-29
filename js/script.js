@@ -48,6 +48,7 @@ if ($(".form-order form").length > 0) {
     });
 
     // Действия по кнопке Сохранить
+    var fixed_offset = $('.main-bar').height();
     $('.modalFormOrder .modal-footer button.btn-success').on('click',function () {
         let id = $(this).attr('data-save'),
             content = $('.form-order form .block .choice[data-save="' + id + '"');
@@ -56,13 +57,42 @@ if ($(".form-order form").length > 0) {
         var object = infoValInput()
         
         if (id == 1) {
-            object.car !== undefined ? successBlock(content) : errorBlock(content)
+            if (object.car !== undefined) {
+                successBlock(content);
+                if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
+                    $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset}, 1000);
+                } else if (!$('.form-order form .block .choice[data-save="3"').hasClass('successBlock')) {
+                    $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset}, 1000);
+                } else {
+                    $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+                }
+            } else {
+                errorBlock(content);
+            }
         }
         if (id == 2) {
             successBlock(content);
+            if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
+                $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset}, 1000);
+            } else if (!$('.form-order form .block .choice[data-save="3"').hasClass('successBlock')) {
+                $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset}, 1000);
+            } else {
+                $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+            }
         }
         if (id == 3) {
-            object.fromCity != '' && object.toCity != '' && object.date != '' ? successBlock(content) : errorBlock(content)
+            if (object.fromCity != '' && object.toCity != '' && object.date != '') {
+                successBlock(content);
+                if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
+                    $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset}, 1000);
+                } else if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
+                    $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset}, 1000);
+                } else {
+                    $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+                }
+            } else {
+                errorBlock(content)
+            }
         }
         checkInfoOrder(object.car, object.brand, object.model, object.fromCity, object.toCity, object.date);
     });
@@ -92,7 +122,17 @@ if ($(".form-order form").length > 0) {
         if (namePeople=='' || phonePeople=='' || phonePeople.length !=17 || checkPeople == false) {
             alert('Заполните обязательные поля')
         } else if (error != '') {
-            alert('Заполните обязательные поля1')
+            // $('#count-collapseOne').collapse('toggle');
+            if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
+                $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset - 10}, 1000);
+                $('.form-order form .block .choice[data-save="1"').addClass('errorBlock');
+            } else if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
+                $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset - 10}, 1000);
+            } else {
+                $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset - 10}, 1000);
+                $('.form-order form .block .choice[data-save="3"').addClass('errorBlock');
+            }
+            
         } else {
             alert('Отправлено')
         }
@@ -141,3 +181,19 @@ $(".callback #btnContactPhone").click(() => {
     }
     return false;
 });
+
+// href
+// var fixed_offset = $('.main-bar').height();
+// $("body").on('click', '[href*="#"]', function (e) {
+//     $('html,body').stop().animate({
+//         scrollTop: $(this.hash).offset().top - 500
+//     }, 1000);
+//     e.preventDefault();
+// });
+// if (window.location.hash!='') {
+//     window.hashName = window.location.hash;
+//     window.location.hash = '';
+//     $(document).ready(function() {
+//         $('html').animate({scrollTop: $(window.hashName).offset().top}, 1500);
+//     });
+// }

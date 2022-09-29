@@ -5861,6 +5861,7 @@ footer.footer-white .widget_getintuch li a {
 	height: 60px;
     object-fit: contain;
 	margin-right: 30px;
+	transition: all .3s;
 }
 #orderDirections1 .modal-body label {
 	display: flex;
@@ -5871,12 +5872,17 @@ footer.footer-white .widget_getintuch li a {
 	margin-bottom: 0;
 	cursor: pointer;
 	font-size: 18px;
+	transition: all .3s;
 }
-#orderDirections1 .modal-body div:last-of-type label {
+/* #orderDirections1 .modal-body div:last-of-type label {
 	border: 0;
-}
+} */
 #orderDirections1 .modal-body label:hover {
-	background-color: var(--rgba-primary-5)
+	background-color: var(--rgba-primary-5);
+	border-bottom: 3px solid rgba(0,0,0,0.3);
+}
+#orderDirections1 .modal-body label:hover img {
+	transform: scale(0.85);
 }
 #orderDirections1 .modal-body input[type='radio'] {
 	display: none;
@@ -5962,9 +5968,11 @@ footer.footer-white .widget_getintuch li a {
 }
 .successBlock {
 	background-color: var(--primary)!important;
+	transition: all .3s;
 }
 .errorBlock {
 	background-color: var(--red)!important;
+	transition: all .3s;
 }
 .successBlock .choice-text span,
 .successBlock .choice-text i,

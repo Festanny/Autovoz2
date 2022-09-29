@@ -5833,7 +5833,7 @@ footer.footer-white .widget_getintuch li a {
 }
 .section-full img {
 	width: 100%;
-	height: max-content;
+	height: 100%;
 }
 .form-order .choice-text i {
 	width: 50px;

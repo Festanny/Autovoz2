@@ -48,7 +48,7 @@ if ($(".form-order form").length > 0) {
     });
 
     // Действия по кнопке Сохранить
-    var fixed_offset = $('.main-bar').height();
+    var fixed_offset = $('.main-bar').height() + 10;
     $('.modalFormOrder .modal-footer button.btn-success').on('click',function () {
         let id = $(this).attr('data-save'),
             content = $('.form-order form .block .choice[data-save="' + id + '"');
@@ -119,9 +119,7 @@ if ($(".form-order form").length > 0) {
             phonePeople = $('.accordion-last-count .accordion-body .form-group-auto input[name="phone"]').val();
             checkPeople = $('.accordion-last-count .accordion-body .form-group .checkbox-data input[type="checkbox"]').is(':checked');
             console.log(checkPeople)
-        if (namePeople=='' || phonePeople=='' || phonePeople.length !=17 || checkPeople == false) {
-            alert('Заполните обязательные поля')
-        } else if (error != '') {
+        if (error != '') {
             // $('#count-collapseOne').collapse('toggle');
             if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
                 $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset - 10}, 1000);
@@ -132,7 +130,8 @@ if ($(".form-order form").length > 0) {
                 $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset - 10}, 1000);
                 $('.form-order form .block .choice[data-save="3"').addClass('errorBlock');
             }
-            
+        } else if (namePeople=='' || phonePeople=='' || phonePeople.length !=17 || checkPeople == false) {
+            alert('Заполните обязательные поля')
         } else {
             alert('Отправлено')
         }

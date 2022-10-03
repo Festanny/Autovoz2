@@ -2,9 +2,10 @@
 	Premery bg color 
 =====================*/
 :root{
-	--primary: rgb(10, 151, 0);
+	/* --primary: rgb(10, 151, 0); */
+	--primary: #4ab8cf;
 	--red: rgb(228, 0, 0);
-	--primary-hover: #087f00;
+	--primary-hover: #41a2b5;
 	--secondry: #2d3239;
 	--color: #444444;
 	--color2: #aaaaaa;

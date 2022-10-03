@@ -2885,16 +2885,27 @@ button:focus{
 .header-creative-one .main-bar .logo-header {
     margin: 5px 0;
 }
-.header-creative-one .extra-nav {
-    padding:38px 40px 35px 0;
+.header-creative-one .headerLogoPhone {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+/* .header-creative-one .extra-nav {
+    padding:38px 40px 35px 0;
+} */
 .header-creative-one .extra-nav .quick-look {
     font-size: 16px;
     font-weight: 700;
-    color: #000;
     font-family: roboto;
     margin-right: 20px;
 	cursor: pointer;
+	background-color: var(--primary);
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 4px
+}
+.header-creative-one .extra-nav .quick-look:hover {
+	background-color: var(--primary-hover);
 }
 .header-creative-one .dlab-quik-search form{
 	max-width: 100%;
@@ -6229,4 +6240,14 @@ footer.footer-white .widget_getintuch li a {
 	.text-page {
 		font-size: 14px;
 	}
+}
+.headerLogoPhone .socPhone {
+	display: flex;
+	align-items: center;
+}
+.headerLogoPhone .socPhone .dlab-social-icon {
+	margin-right: 20px;
+}
+.headerLogoPhone .socPhone .dlab-social-icon li a {
+	font-size: 20px;
 }

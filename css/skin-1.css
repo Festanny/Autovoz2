@@ -2,20 +2,20 @@
 	Premery bg color 
 =====================*/
 :root{
-	/* --primary: rgb(10, 151, 0); */
-	--primary: #4ab8cf;
+	--primary-green: rgb(10, 151, 0);
+	--primary: rgb(74, 184, 207);
 	--red: rgb(228, 0, 0);
 	--primary-hover: #41a2b5;
 	--secondry: #2d3239;
 	--color: #444444;
 	--color2: #aaaaaa;
-	--rgba-primary-1: rgba(10, 151, 0, 0.1);
-	--rgba-primary-2: rgba(10, 151, 0, 0.2);
-	--rgba-primary-3: rgba(10, 151, 0, 0.3);
-	--rgba-primary-4: rgba(10, 151, 0, 0.4);
-	--rgba-primary-5: rgba(10, 151, 0, 0.5);
-	--rgba-primary-6: rgba(10, 151, 0, 0.6);
-	--rgba-primary-7: rgba(10, 151, 0, 0.7);
-	--rgba-primary-8: rgba(10, 151, 0, 0.8);
-	--rgba-primary-9: rgba(10, 151, 0, 0.9);
+	--rgba-primary-1: rgba(74, 184, 207, 0.1);
+	--rgba-primary-2: rgba(74, 184, 207, 0.2);
+	--rgba-primary-3: rgba(74, 184, 207, 0.3);
+	--rgba-primary-4: rgba(74, 184, 207, 0.4);
+	--rgba-primary-5: rgba(74, 184, 207, 0.5);
+	--rgba-primary-6: rgba(74, 184, 207, 0.6);
+	--rgba-primary-7: rgba(74, 184, 207, 0.7);
+	--rgba-primary-8: rgba(74, 184, 207, 0.8);
+	--rgba-primary-9: rgba(74, 184, 207, 0.9);
 }

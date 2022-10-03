@@ -35,7 +35,7 @@ input.addEventListener("keydown", mask, false)
 
 // Главная форма
 if ($(".form-order form").length > 0) {
-    // Подсветка блока при открытие modal
+    // Подсветка блока при открытии modal
     $('.form-order form .block .choice:not(.accordion-last-count)').on('click',function () {
         $('.form-order form .block .choice').removeClass('expectation');
         $(this).addClass('expectation');
@@ -61,10 +61,17 @@ if ($(".form-order form").length > 0) {
                 successBlock(content);
                 if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
                     $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset}, 1000);
+                    $('.modal.modalFormOrder[data-save="' + 2 + '"').modal('show')
+                    $('.form-order form .block .choice').removeClass('expectation');
+                    $('.form-order form .block .choice[data-save="' + 2 + '"]').addClass('expectation');
                 } else if (!$('.form-order form .block .choice[data-save="3"').hasClass('successBlock')) {
                     $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset}, 1000);
+                    $('.modal.modalFormOrder[data-save="' + 3 + '"').modal('show')
+                    $('.form-order form .block .choice').removeClass('expectation');
+                    $('.form-order form .block .choice[data-save="' + 3 + '"]').addClass('expectation');
                 } else {
                     $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+                    $('#count-collapseOne').collapse('show')
                 }
             } else {
                 errorBlock(content);
@@ -74,10 +81,17 @@ if ($(".form-order form").length > 0) {
             successBlock(content);
             if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
                 $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset}, 1000);
+                $('.modal.modalFormOrder[data-save="' + 1 + '"').modal('show')
+                $('.form-order form .block .choice').removeClass('expectation');
+                $('.form-order form .block .choice[data-save="' + 1 + '"]').addClass('expectation');
             } else if (!$('.form-order form .block .choice[data-save="3"').hasClass('successBlock')) {
                 $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset}, 1000);
+                $('.modal.modalFormOrder[data-save="' + 3 + '"').modal('show')
+                $('.form-order form .block .choice').removeClass('expectation');
+                $('.form-order form .block .choice[data-save="' + 3 + '"]').addClass('expectation');
             } else {
                 $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+                $('#count-collapseOne').collapse('show')
             }
         }
         if (id == 3) {
@@ -85,10 +99,17 @@ if ($(".form-order form").length > 0) {
                 successBlock(content);
                 if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
                     $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset}, 1000);
+                    $('.modal.modalFormOrder[data-save="' + 1 + '"').modal('show')
+                    $('.form-order form .block .choice').removeClass('expectation');
+                    $('.form-order form .block .choice[data-save="' + 1 + '"]').addClass('expectation');
                 } else if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
                     $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset}, 1000);
+                    $('.modal.modalFormOrder[data-save="' + 2 + '"').modal('show')
+                    $('.form-order form .block .choice').removeClass('expectation');
+                    $('.form-order form .block .choice[data-save="' + 2 + '"]').addClass('expectation');
                 } else {
                     $('html, body').animate({scrollTop: $('#infoPeopleForm').offset().top - fixed_offset}, 1000);
+                    $('#count-collapseOne').collapse('show')
                 }
             } else {
                 errorBlock(content)
@@ -148,13 +169,13 @@ if ($(".form-order form").length > 0) {
             error = '1';
         }
     }
-    // Подсветка блоков зеленым цветом
+    // Подсветка блоков цветом успеха
     function successBlock(content) {
         content.removeClass('errorBlock');
         content.addClass('successBlock');
         contentModal.modal('toggle');
     };
-    // Подсветка блоков красным цветом
+    // Подсветка блоков цветом не успеха
     function errorBlock(content) {
         content.removeClass('successBlock');
         content.addClass('errorBlock');

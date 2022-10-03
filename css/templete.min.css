@@ -5803,6 +5803,7 @@ i.text-36 {
 	gap: 20px;
 	width: 100%;
 	margin: 0 auto;
+	margin-bottom: 30px;
 }
 .text-name-page {
 	padding-top: 100px;
@@ -6058,7 +6059,10 @@ footer.footer-white .widget_getintuch li a {
 		height: 32px;
 	}
 }
-  
+
+.text-page img {
+	height: max-content;
+}
 
 
 @media screen and (max-width: 1200px) {

@@ -2293,7 +2293,7 @@ blockquote:before {
 
 .extra-nav {
     float: right;
-    padding: 25px 0;
+    /* padding: 25px 0; */
     position: relative;
     z-index: 9;
 }
@@ -3264,7 +3264,7 @@ blockquote:before {
     padding: 33px 9px;
 }
 .is-fixed .extra-nav {
-    padding: 25px 0;
+    /* padding: 25px 0; */
 }
 .extra-nav .site-button{
 	font-size:14px;
@@ -3289,9 +3289,9 @@ blockquote:before {
 	.navbar-toggler{
 		margin:27px 0 14px 15px;
 	}
-	.extra-nav{
+	/* .extra-nav{
 		 padding: 15px 0;
-	}
+	} */
 	.header-curve .logo-header img {
 		margin-top: -5px;
 	}
@@ -5160,7 +5160,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
     font-weight: 600;
     font-size: 16px;
 }
-.widget_getintuch i {
+.widget_getintuch .contactFooter i {
     position: absolute;
     left: 0;
     top: 5px;
@@ -8711,7 +8711,7 @@ footer .dlab-post-meta ul li {
 }
 /*widget Getintuch*/
 
-footer .widget_getintuch i {
+footer .widget_getintuch .contactFooter i {
     background-color: rgba(0, 0, 0, 0);
     border: 0px solid rgba(0, 0, 0, 0);
 }

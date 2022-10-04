@@ -142,12 +142,12 @@ if ($(".form-order form").length > 0) {
         if (error != '') {
             // $('#count-collapseOne').collapse('toggle');
             if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {
-                $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset - 10}, 1000);
+                $('html, body').animate({scrollTop: $('#typeAuto').offset().top - fixed_offset}, 1000);
                 $('.form-order form .block .choice[data-save="1"').addClass('errorBlock');
             } else if (!$('.form-order form .block .choice[data-save="2"').hasClass('successBlock')) {
-                $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset - 10}, 1000);
+                $('html, body').animate({scrollTop: $('#modelBrand').offset().top - fixed_offset}, 1000);
             } else {
-                $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset - 10}, 1000);
+                $('html, body').animate({scrollTop: $('#infoTrans').offset().top - fixed_offset}, 1000);
                 $('.form-order form .block .choice[data-save="3"').addClass('errorBlock');
             }
         } else if (namePeople=='' || phonePeople=='' || phonePeople.length !=17 || checkPeople == false) {

@@ -139,7 +139,6 @@ if ($(".form-order form").length > 0) {
         var namePeople = $('.accordion-last-count .accordion-body .form-group-auto input[name="name"]').val(),
             phonePeople = $('.accordion-last-count .accordion-body .form-group-auto input[name="phone"]').val();
             checkPeople = $('.accordion-last-count .accordion-body .form-group .checkbox-data input[type="checkbox"]').is(':checked');
-            console.log(checkPeople)
         if (error != '') {
             // $('#count-collapseOne').collapse('toggle');
             if (!$('.form-order form .block .choice[data-save="1"').hasClass('successBlock')) {

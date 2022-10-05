@@ -200,19 +200,3 @@ $(".callback #btnContactPhone").click(() => {
     }
     return false;
 });
-
-// href
-// var fixed_offset = $('.main-bar').height();
-// $("body").on('click', '[href*="#"]', function (e) {
-//     $('html,body').stop().animate({
-//         scrollTop: $(this.hash).offset().top - 500
-//     }, 1000);
-//     e.preventDefault();
-// });
-// if (window.location.hash!='') {
-//     window.hashName = window.location.hash;
-//     window.location.hash = '';
-//     $(document).ready(function() {
-//         $('html').animate({scrollTop: $(window.hashName).offset().top}, 1500);
-//     });
-// }
